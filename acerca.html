@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio 1</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <style>
+      
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .menu a:hover {
+            background-color: #575757;
+        }
+
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            background-color: #fff;
+            height: 4px;
+            width: 30px;
+            margin: 5px 0;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            background-color: #333;
+            z-index: 1;
+            flex-direction: column;
+            transition: left 0.3s ease;
+        }
+
+        .menu.active ul {
+            left: 0;
+        }
+
+        .menu ul li {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #575757;
+        }
+
+        .menu ul li:last-child {
+            border-bottom: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        article h2 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        article p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fffefe;
+        }
+    </style>
+</head>
+<body>
+    <h1>Juguetería TOYSTORE</h1>
+
+    <header>
+        <div class="container">
+            <a href="index.html" id="logo">
+                <img style="width: 110px; height: 50px;" src="https://img.freepik.com/vector-gratis/diseno-fuente-word-toy-shop-muchos-juguetes_1308-42318.jpg" alt="">
+            </a>
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="acerca.html" class="active">Acerca</a></li>
+                        <li><a href="productos.html">Tienda</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <h2>Acerca de Nosotros</h2>
+            <p>Érase una vez, en el barrio de Buceo en Montevideo, dos amigos llamados Agustín y Gaspar. Desde pequeños, compartían una pasión por los juguetes y la creatividad. Juntos, pasaban horas creando sus propios juguetes con materiales reciclados, soñando con algún día tener su propia tienda. Cuando llegaron a la adultez, decidieron que era el momento de hacer realidad ese sueño y fundaron *TOYSTORE*, una tienda única en el barrio.
+
+                *TOYSTORE* no era una tienda común de juguetes. Agustín y Gaspar querían ofrecer algo diferente: juguetes artesanales, ecológicos y hechos con mucho amor. Cada pieza en su tienda estaba cuidadosamente elaborada para estimular la imaginación de los niños, alejándose de los juguetes producidos en masa que dominaban el mercado. La tienda, ubicada en una calle tranquila del Buceo, tenía un ambiente cálido y acogedor, donde los juguetes de madera y tela se destacaban por su diseño único y colores vibrantes.
+
+                Los primeros días fueron difíciles, con pocos clientes y mucha incertidumbre. Pero Agustín y Gaspar no se rindieron. Gaspar, siempre creativo, tuvo una idea brillante: organizar talleres para que los niños y sus padres pudieran aprender a hacer sus propios juguetes. Esto atrajo a muchas familias, que comenzaron a ver *TOYSTORE* no solo como una tienda, sino como un espacio de aprendizaje y creatividad. Los talleres fueron todo un éxito, y el local empezó a llenarse de risas y momentos compartidos.
+
+                Con el tiempo, *TOYSTORE* se ganó una reputación en el Buceo por su enfoque innovador y su compromiso con la comunidad. Agustín y Gaspar aprendieron a adaptarse a las necesidades de sus clientes y a mantener la esencia de su sueño: ofrecer juguetes que no solo divirtieran, sino que también promovieran la creatividad y el trabajo en equipo. A pesar de los desafíos, su amor por los juguetes y su dedicación a su comunidad los impulsaron a seguir adelante.
+
+                Hoy, *TOYSTORE* sigue siendo un lugar especial en Buceo, donde cada juguete tiene una historia y cada cliente se siente parte de algo más grande. La tienda es un testimonio de cómo dos amigos con un sueño y mucha pasión pueden transformar su comunidad y dejar una huella duradera.</p>
+        </article>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

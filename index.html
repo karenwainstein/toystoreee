@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juguetería TOYSTORE</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .menu a:hover {
+            background-color: #575757;
+        }
+
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            background-color: #fff;
+            height: 4px;
+            width: 30px;
+            margin: 5px 0;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            background-color: #333;
+            z-index: 1;
+            flex-direction: column;
+            transition: left 0.3s ease;
+        }
+
+        .menu.active ul {
+            left: 0;
+        }
+
+        .menu ul li {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #575757;
+        }
+
+        .menu ul li:last-child {
+            border-bottom: none;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <h1>Juguetería TOYSTORE</h1>
+    <header>
+        <div class="container">
+            <a href="index.html" id="logo">
+                <img style="width: 110px; height: 50px;" src="https://img.freepik.com/vector-gratis/diseno-fuente-word-toy-shop-muchos-juguetes_1308-42318.jpg" alt="">
+            </a>
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="acerca.html">Acerca</a></li>
+                        <li><a href="productos.html">Tienda</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main> 
+        <section id="hero">
+            <img src="https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2020/12/toy-story-2153299.jpg?tf=1200x900" alt="Hero Image">
+            <div class="hero-fill">
+                <div class="hero-text">
+                    <h2>Juguetería ToyStore</h2>
+                    <p>Juguetes con la mejor calidad y el mejor precio</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="colums container">
+            <article>
+                <img style="width: 250px; height: auto;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStELswO65OBHmmUjV9N5fCzB_zrLdpZguwcg&s" alt="">
+                <h2>Bebés</h2>
+                <p><br>-Sonajeros<br>-Peluches<br>-Centro de Actividades</p>
+                <a href="productos.html#juguetes-bebes"><button class="btn">Más info</button></a>
+            </article>
+            <article>
+                <img style="width: 250px; height: auto;" src="https://st2.depositphotos.com/4678527/10981/v/450/depositphotos_109817726-stock-illustration-children-playing-with-toys-brother.jpg" alt="">
+                <h2>Niños</h2>
+                <p><br>-Bloques de construcción<br>-Rompecabezas<br>-Juego de mesa</p>
+                <a href="productos.html#juguetes-ninos"><button class="btn">Más info</button></a>
+            </article>
+            <article>
+                <img style="width: 250px; height: auto;" src="https://png.pngtree.com/png-clipart/20230914/original/pngtree-teenagers-clipart-cartoon-set-of-different-young-college-students-vector-png-image_12151054.png" alt="">
+                <h2>Adolescentes</h2>
+                <p><br>-Videojuegos<br>-Juguetes tecnológicos<br>-Figuras de acción</p>
+                <a href="productos.html#juguetes-adolescentes"><button class="btn">Más info</button></a>
+            </article>
+        </section>
+
+        <section class="container">
+            <article>
+                <h2>Como encontrarnos</h2>
+                <p>
+                <br>Localidad: Nuestra localidad se encuentra en el barrio Buceo.</br>
+                <br>Teléfono: Contactanos al siguiente número de celular 093 642 099</br>
+                </p>
+            </article>
+        </section>
+
+        <section class="colums container">
+            <article>
+                <h2>Integrantes</h2>
+                <p>Agustin Pereyra<br>Gaspar Guarisco</p>
+            </article>
+            <article>
+                <h2>Acerca de Nosotros</h2>
+                <p>En el pintoresco barrio de Buceo, en una pequeña calle adoquinada...</p>
+                <a href="acerca.html"><button class="btn">Más info</button></a>
+            </article>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

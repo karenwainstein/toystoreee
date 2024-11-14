@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=REM:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+    
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .menu a:hover {
+            background-color: #ffffff;
+        }
+
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            background-color: #fff;
+            height: 4px;
+            width: 30px;
+            margin: 5px 0;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            height: 100%;
+            background-color: #333;
+            z-index: 1;
+            flex-direction: column;
+            transition: left 0.3s ease;
+        }
+
+        .menu.active ul {
+            left: 0;
+        }
+
+        .menu ul li {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #575757;
+        }
+
+        .menu ul li:last-child {
+            border-bottom: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        article h2 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        article p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Juguetería TOYSTORE</h1>
+
+    <header>
+        <div class="container">
+            <a href="index.html" id="logo">
+                <img style="width: 110px; height: 50px;" src="https://img.freepik.com/vector-gratis/diseno-fuente-word-toy-shop-muchos-juguetes_1308-42318.jpg" alt="">
+            </a>
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="acerca.html">Acerca</a></li>
+                        <li><a href="productos.html">Tienda</a></li>
+                        <li><a href="contacto.html" class="active">Contacto</a></li>
+                    </ul>
+                </nav>
+
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <article>
+                <h2>Contactanos</h2>
+                <p>
+                    <br>Correo electronico: toystore@gmail.com 
+                    <br>Telefono: 093 642 099
+                    <br>Horario de Atencion: De Lunes a Viernes de 7:30-19:30
+                    <br>Horario de Atencion: Sábado y Domingo de 10:30-18:30
+                </p>
+            </article>
+        </section>
+
+        <section class="colums container">
+            <article>
+                <h2>Estamos aquí</h2>
+                <p>
+                    <a href="https://maps.app.goo.gl/yNdXHrbDZvkLgeqy7"><img style="width: 100%; max-width: 500px; height: auto;" src="https://www.google.com/maps/vt/data=WxY9XkYvvQdSnSNDUuvIeO_UUOhaqY8rE9BiqROuSt5C5Z-YT0VxU3g8ZBdfQJkuW2ysUlRm9BIq6WIS21FdSfU8XNvhWPSe0OS5O37WrwRk9WHgS5mc5YPVTYP8tFCJywCRnzcTFTpMvEqFLWd_4FqBebecRnVWcF40wNTsS6pO6SO08I07GGODDeDOlhpHcp9j1BbSeS9ZrsjSbH9srbdiUn0" alt=""></a>
+
+                </p>
+            </article>
+
+            <article>
+                <h2>Acerca de Nosotros</h2>
+                <p>En el pintoresco barrio de Buceo, en una tranquila calle adoquinada, rodeada de coloridas casas de estilo clásico, se encuentra una de las jugueterías más queridas de la ciudad. Con años de tradición, ToyStore se ha convertido en un verdadero refugio para niños, padres y coleccionistas, ofreciendo una amplia gama de juguetes que van desde los más sencillos hasta los más innovadores. Cada rincón de la tienda guarda un pedazo de magia, donde la diversión y el aprendizaje se encuentran en cada estante..</p>
+            </article>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
